@@ -3,7 +3,6 @@ CC = cc
 CFLAGS = -g -I/minilibx -Wall -Wextra -Werror
 MLXFLAGS = -L./minilibx-linux -lmlx -lXext -lX11 -lm
 
-
 SRC = \
 	src/handlers.c \
 	src/init.c \

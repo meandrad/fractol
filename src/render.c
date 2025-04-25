@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/24 21:17:04 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/25 01:27:36 by meandrad         ###   ########.fr       */
+/*   Created: 2025/04/20 17:17:04 by meandrad          #+#    #+#             */
+/*   Updated: 2025/04/25 01:37:33 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	my_pixel_put(int x, int y, t_img *img, int color)
 }
 
 static void	mandel_vs_julia(t_complex *z, t_complex *c, t_fractal *fractal)
-{	
+{
 	if (!ft_strncmp(fractal->name, "julia", 5))
 	{
 		c->x = fractal->julia_x;
