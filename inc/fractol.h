@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 21:46:09 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/24 21:57:46 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/25 01:19:57 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ typedef struct s_fractal
 	double	x_max;
 	double	y_max;
 	double	y_min;
+	double	mouse_re;
+	double	mouse_im;
 }		t_fractal;
 
 //handlers

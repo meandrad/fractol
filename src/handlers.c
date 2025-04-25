@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 21:16:29 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/24 22:24:50 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/25 01:20:49 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,11 @@ int	key_handler(int keysym, t_fractal *fractal)
 
 int	mouse_handler(int button, int x, int y, t_fractal *frac)
 {
-	double	mouse_re;
-	double	mouse_im;
 	double	zoom_factor;
 
-	mouse_re = frac->shift_x + (x - WIDTH / 2.0)
+	frac->mouse_re = frac->shift_x + (x - WIDTH / 2.0)
 		/ (WIDTH / (frac->zoom * 2));
-	mouse_im = frac->shift_y - (y - HEIGHT / 2.0)
+	frac->mouse_im = frac->shift_y - (y - HEIGHT / 2.0)
 		/ (HEIGHT / (frac->zoom * 2));
 	if (button == Button4)
 	{
@@ -63,8 +61,10 @@ int	mouse_handler(int button, int x, int y, t_fractal *frac)
 	}
 	else
 		return (0);
-	frac->shift_x = mouse_re - (x - WIDTH / 2.0) / (WIDTH / (frac->zoom * 2));
-	frac->shift_y = mouse_im + (y - HEIGHT / 2.0) / (HEIGHT / (frac->zoom * 2));
+	frac->shift_x = frac->mouse_re - (x - WIDTH / 2.0)
+		/ (WIDTH / (frac->zoom * 2));
+	frac->shift_y = frac->mouse_im + (y - HEIGHT / 2.0)
+		/ (HEIGHT / (frac->zoom * 2));
 	fractal_render(frac);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 21:17:04 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/24 21:40:13 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/25 01:27:36 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static void	handle_pixel(int x, int y, t_fractal *fractal)
 			my_pixel_put(x, y, &fractal->img, color);
 			return ;
 		}
-		++i;
+		i++;
 	}
 	my_pixel_put(x, y, &fractal->img, BLACK);
 }

@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 21:16:45 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/24 22:27:42 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/25 01:24:53 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	malloc_error(void)
 void	data_init(t_fractal *fractal)
 {
 	fractal->escape_value = 4;
-	fractal->max_interaction = 100;
+	fractal->max_interaction = 42;
 	fractal->shift_x = 0.0;
 	fractal->shift_y = 0.0;
 	fractal->zoom = 1.0;
@@ -36,8 +36,6 @@ static void	events_init(t_fractal *fractal)
 		StructureNotifyMask, close_handler, fractal);
 	mlx_key_hook(fractal->win_ptr, key_handler, fractal);
 	mlx_mouse_hook(fractal->win_ptr, mouse_handler, fractal);
-	mlx_hook(fractal->win_ptr, MotionNotify,
-		PointerMotionMask, julia_track, fractal);
 }
 
 void	fractal_init(t_fractal *fractal)
